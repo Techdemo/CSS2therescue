@@ -1,0 +1,518 @@
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom styles */
+:root {
+    --blue: #3D7AF7;
+    --calcEllipseLeft: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+    --calcEllipseRight: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+     --auto-grid-min-size: 16rem;
+     --eyeVar: 0%;
+}
+h1, h2, h3, h1 {
+  font-family: 'Spectral', serif;
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+  color: var(--blue);
+}
+h1 {
+    font-size: calc(54px + (81 - 54) * ((100vw - 300px) / (1600 - 300)));
+}
+h2 {
+    font-size: calc(36px + (54 - 36) * ((100vw - 300px) / (1600 - 300)));
+}
+h3 {
+    font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+}
+p, cite {
+    font-family: 'Karla', sans-serif;
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    color: var(--blue);
+}
+body {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+header {
+    align-self: center;
+}
+.price {
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.header {
+    text-align:center;
+}
+.wrapper {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
+hr {
+    display: block;
+    height: 1px;
+    opacity: 0.5;
+    border: 0;
+    border-top: 5px solid var(--blue);
+    margin: 1em 0;
+    padding: 0;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "title price"
+                         "paragraph .";
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 2px dotted var(--blue);
+    padding: 1em;
+}
+h2:first-child::first-letter {
+     font-size: calc(54px + (81 - 54) * ((100vw - 300px) / (1600 - 300)));
+    text-decoration: underline overline;
+    color: var(--blue);
+    float: left;
+    text-transform: uppercase;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-top: 19px;
+    padding-left: 5px;
+    font-family: 'Lobster', cursive;
+}
+
+article > .title {
+    grid-area: title;
+}
+article > .paragraph {
+    grid-area: paragraph;
+}
+article > .price {
+    grid-area: price
+}
+.price::before {
+    content: '\20AC';
+    color: var(--blue);
+}
+
+.quote {
+    text-align: center;
+}
+.quote--paragraph {
+    font-size: calc(36px + (54 - 36) * ((100vw - 300px) / (1600 - 300)));
+}
+.quote--cite {
+    font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    color: var(--blue);
+}
+#curve {
+    fill: transparent;
+}
+text {
+    font-family: 'Karla', sans-serif;
+    font-size: 1em;
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    color: var(--blue);
+}
+.quoteText {
+  transition: all 0.5s ease-in;
+}
+.quoteText:hover  {
+  transform: skewY(-20deg);
+  transition: all 0.5s linear;
+}
+.element {
+  shape-outside: ellipse(150px 300px at 50% 50%);
+}
+.quoteTest {
+    shape-outside: ellipse(100px 200px at 50% 50%);
+  clip-path: ellipse(100px 200px at 50% 50%);
+  max-width: 100vw;
+    height: 100%;
+  opacity: .2;
+  background-color: var(--blue);
+  transition: all 0.5s ease-in;
+}
+.quoteTest:hover{
+   opacity: 1;
+   transition: all 0.5s ease-in;
+   clip-path: ellipse(400px 200px at 50% 50%);
+}
+.quoteTest:hover .paragraph {
+    color: white;
+}
+
+/* drop  animation */
+.drop {
+	background: rgba(255, 255, 255);
+	border: 1px solid var(--blue);
+    border-radius: 45%;
+    box-shadow: 0 8px 6px -6px black;
+	position: relative;
+	margin: 0 auto;
+	width: 15em;
+	height: 15em;
+	overflow: hidden;
+}
+.drop:before,
+.drop:after {
+	content:"";
+	display:block;
+	position:absolute;
+}
+
+/* Drop */
+
+.drop:before {
+	background:white;
+	border-radius: 20%;
+
+	/* Drop start */
+
+	box-shadow: 0 0 0 0.1em var(--blue),
+	            0 0 0 0.15em var(--blue),
+	            0 0 0 0.2em var(--blue),
+	            0 0 0 0.25em var(--blue),
+	            0 0 0 0.3em var(--blue),
+	            0 0 0 0.35em var(--blue),
+	            0 0 0 0.4em var(--blue),
+	            0 0 0 0.45em var(--blue),
+	            0 0 0 0.5em var(--blue);
+	top: 0%; left: 50%;
+
+	/* The "width" and "height" of the division must be smaller than the "box-shadow" total size. So we can control different variant sizes. */
+	width: 0.2em;
+	height: 0.2em;
+	animation: fall 3.5s cubic-bezier(0.5, 0, 1, 0.5) infinite;
+}
+/* Surface */
+.drop:after {
+	background: var(--blue);
+	background: linear-gradient(rgb(255, 255, 255) 0%,var(--blue) 10%, rgba(255, 255, 255) 100%);
+	left: 0;
+	bottom: 0;
+	width: inherit;
+	height: 3em;
+	opacity: 0.5;
+	animation: surface 3s linear infinite;
+}
+/* Drop animation */
+@keyframes fall  {
+	/* Drop form */
+	5%, 15%  {
+		box-shadow: 0 -1.4em 0 0.1em var(--blue),
+		            0 -0.8em 0 0.15em var(--blue),
+		            0 -0.3em 0 0.2em var(--blue),
+		            0 -0.1em 0 0.25em var(--blue),
+		            0 0 0 0.3em var(--blue),
+		            0 0.2em 0 0.35em var(--blue),
+		            0 0.4em 0 0.4em var(--blue),
+		            0 0.6em 0 0.45em var(--blue),
+		            0 0.8em 0 0.5em var(--blue);
+	}
+	/* Drop fall */
+	16%  {
+		top: 80%;
+	}
+	/* Contact surface */
+	18%  {
+		top: 80%;
+		box-shadow: 1em -8em 0 0.2em var(--blue),
+		            -2.2em -3.8em 0 0.1em var(--blue),
+		            3em -2.85em 0 0.3em var(--blue),
+		            -3.5em -4em 0 0.2em var(--blue),
+		            0 0 0 0.3em var(--blue),
+		            2em -2em 0 0.2em var(--blue),
+		            -0.3em -3em 0 0.2em var(--blue),
+		            0.5em -5em 0 0.35em var(--blue),
+		            -3em -1em 0 0.3em var(--blue);
+	}
+	/* Dispersion */
+	30%  {
+		top: 90%;
+		box-shadow: 1.5em 0 0 0.2em rgba(252, 252, 255, 0.1),
+		            -2em 0 0 0.15em rgba(252, 252, 255, 0.1),
+		            3em 0 0 0.2em rgba(252, 252, 255, 0.1),
+		            -2em 0 0 0.25em rgba(252, 252, 255, 0.1),
+		            0 0 0 0.2em rgba(252, 252, 255, 0.1),
+		            2.35em 0 0 0.3em rgba(252, 252, 255, 0.1),
+		            -0.5em 0 0 0.2em rgba(252, 252, 255, 0.1),
+		            1em 0 0 0.3em rgba(252, 252, 255, 0.1),
+		            -4em 0 0 0.4em rgba(252, 252, 255, 0.1);
+	}
+	/* Hidden */
+	40%, 100%  {
+		top: 95%;
+		background: rgba(255, 255, 255, 1);
+		box-shadow: 1.8em 0.5em 0 0.2em rgba(255, 255, 255, 0),
+		            -3em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+		            4em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+		            -3.5em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+		            0 0 0 0.3em rgba(255, 255, 215, 0),
+		            2.45em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+		            -0.8em 0.5em 0 0.2em rgba(255, 255, 255, 0),
+		            1.5em 0.5em 0 0.3em rgba(255, 255, 255, 0),
+		            -4.5em 0.5em 0 0.2em rgba(255, 255, 255, 0);
+	}
+}
+
+/* Animation of water surface */
+@keyframes surface  {
+	35%  {
+        color: var(--blue);
+        border-radius: 0 50% 0 75%;
+		opacity: 0.4;
+        height: 2em;
+    }
+
+    50% {
+        border-radius: 0 75% 0 75%;
+		opacity: 0.9;
+        height: 3em;
+    }
+}
+
+/*  */
+/* quote card animation */
+/*  */
+
+.quote-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2em;
+}
+.quote-grid > input {
+    display: none;
+}
+.quote-grid > label {
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    color: var(--blue);
+    text-transform: uppercase;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-top: 19px;
+    padding-left: 5px;
+    font-family: 'Lobster', cursive;
+    font-size: calc(36px + (54 - 36) * ((100vw - 300px) / (1600 - 300)));
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+label:hover {
+
+    animation: scale 2s linear infinite;
+}
+
+@keyframes scale {
+    25% {
+        transform: scaleX(1.2);
+    }
+    50% {
+        transform: scaleX(0.6);
+    }
+    75% {
+        transform: scaleX(0.3);
+    }
+}
+
+
+.quote-card {
+  background-color: transparent;
+  width: 600px;
+  height: 300px;
+  perspective: 1000px;
+}
+.quote__card--paragraph {
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+    color: white;
+    padding: 25px;
+}
+.quote-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+.quote-card:focus {
+    outline: 0;
+}
+input[type=checkbox]:checked ~ .quote-card .quote-card-inner  {
+   transform: rotateY(180deg);
+}
+input[type=checkbox]:checked ~ .quote-card:focus .quote-card-inner  {
+   transform: rotateY(180deg);
+}
+.quote-card-front,
+.quote-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 25%;
+}
+.quote-card-front {
+  background: var(--blue);
+  color: black;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quote-card-back {
+  background: var(--blue);
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* //////////////////////// */
+
+@keyframes moveDown{
+	0% {
+		transform: translateY(-40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes moveUp{
+	0% {
+		transform: translateY(40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+/* //////////////////////// */
+#choose-theme-color{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 5vh;
+    border: none;
+}
+#choose-theme-color:hover {
+     animation: scale 0.5s ease-in infinite;
+}
+#color-theme {
+    background-color: white;
+}
+.header__color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 5vh;
+    border: none;
+}
+@keyframes scale {
+    25% {
+        transform: skewX(20deg);
+    }
+    75% {
+        transform: skewX(15deg);
+    }
+}
+
+/* ///////// eyes //// */
+.eyes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+.eyeLeft {
+    clip-path: ellipse(25% var(--eyeVar) at 50% 50%);
+    background-color: var(--blue);
+    height: 20vh;
+    width: 15vw;
+}
+.eyeRight {
+    height: 20vh;
+    background-color: var(--blue);
+    width: 15vw;
+    clip-path: ellipse(25% var(--eyeVar) at 50% 50%);
+}
+.slider {
+    transform: rotate(270deg);
+}

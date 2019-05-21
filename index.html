@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>A template for a responsive restaurant menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla|Spectral:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- SUGGESTIONS FOR STYLING
+	https://duckduckgo.com/?q=beautiful+restaurant+menus&t=ffab&iax=images&ia=images -->
+</head>
+<body>
+    <header class="header">
+        <div class="drop"></div>
+        <h1 class="header__h1"><span>Russ</span> <span>&</span> <span>Daughters</span></h1>
+        <p class="header__p">appetizing since 1924</p>
+        <div class="header__color">
+            <label id="color-theme" for="choose-theme-color">Choose a theme color:</label>
+            <input type="color" id="choose-theme-color">
+        </div>
+    </header>
+    <main>
+        <div class="wrapper ">
+        <!-- // small dishes -->
+            <section class="smalldish auto-grid" id="st-panel-1">
+                <header class="smalldish__header">
+                    <h2 class="smalldish--title smalldish__header--subtitle">Noshes</h2>
+                    <p class="smalldish--paragraph">small dishes</p>
+                </header>
+                <article class="smalldish__article">
+                    <h3 class="smalldish--title title">Russ &amp; Daughters Knishes</h3>
+                    <p class="smalldish--paragraph paragraph">Potato, carmelized onion, mustard</p>
+                    <div class="smalldish--price price">
+                        <p>8</p>
+                    </div> <!-- price -->
+                </article>
+                <article class="smalldish__article">
+                    <h3 class="smalldish--title title">Hot Smoke/Cold Smoke</h3>
+                    <p class="smalldish--paragraph paragraph">Kippered baked Salmon &amp; Scottish smoked salmon spread, waffle-cut potato chips</p>
+                    <div class="smalldish--price price">
+                        <p>13</p>
+                    </div>
+                </article>
+                <article class="smalldish__article">
+                    <h3 class="smalldish--title title">Potato latkes</h3>
+                    <p class="smalldish--paragraph paragraph">Salmon roe and creme fraiche</p>
+                    <div class="smalldish--price price"><p>13</p></div>
+                </article>
+                <article class="smalldish__article">
+                    <h3 class="smalldish--title title">Kasha Varnishkas</h3>
+                    <p class="smalldish--paragraph paragraph">buckwheat, caramelized onion, bowtie egg noodles</p>
+                    <div class="smalldish--price price"><p>13</p></div>
+                </article>
+                <article class="smalldish__article">
+                    <h3 class="smalldish--title title">Chopped liver</h3>
+                    <p class="smalldish--paragraph paragraph">Matzo, pickled red onion</p>
+                    <div class="smalldish--price price"><p>9</p></div>
+                </article>
+                <article class="smalldish__article">
+                    <h3 class="smalldish--title title">Super heebster</h3>
+                    <p class="smalldish--paragraph paragraph">whitefish &amp; baked salmon salad, wasabi-infused fish roe, horseradish dill cream cheese, bagel
+                    toast</p>
+                    <div class="smalldish--price price"><p>10</p></div>
+                </article>
+                <article class="smalldish__article">
+                    <h3 class="smalldish--title title">Pastrami Russ</h3>
+                    <p class="smalldish--paragraph paragraph">pastrami-cured salmon, muenster cheese, sauerkraut, mustard, pickle, pretzel roll</p>
+                    <div class="smalldish--price price"><p>12</p></div>
+                </article>
+                <article class="smalldish__article">
+                    <h3 class="smalldish--title title">sours</h3>
+                    <p class="smalldish--paragraph paragraph">pickled vegetables, pickles from the barrel</p>
+                    <div class="smalldish--price price"><p>7</p></div>
+                </article>
+            </section>
+            <hr />
+        </div>
+
+
+            <div class="wrapper st-scroll">
+            <section class="auto-grid" id="st-panel-2">
+                <header class="boards__header">
+                    <h2 class="boards--title boards__header--subtitle">boards</h2>
+                    <p class="boards--paragrah paragraph">open-faced sandwiches</p>
+                </header>
+                <article>
+                    <h3 class="boards--title title">the classic</h3>
+                    <p class="boards--paragraph paragraph">gaspe nova smoked salmon, cream cheese, bagel-bialy, tomato, onion, capers</p>
+                    <div class="boards--price price"><p>16</p></div>
+                </article>
+                <article>
+                    <h3 class="boards--title title">mensch</h3>
+                    <p class="boards--paragraph paragraph">sturgeon, butter, bagel/bialy, tomato, onion, capers</p>
+                    <div class="boards--price price"><p>22</p></div>
+                </article>
+                <article>
+                    <h3 class="boards--title title">shtetl</h3>
+                    <p class="boards--paragraph paragraph">smoked sable, goat cream cheese, bagel-bialy, tomato, onion, capers</p>
+                    <div class="boards--price price"><p>18</p></div>
+                </article>
+                <article>
+                    <h3 class="boards--title title">yum kippered</h3>
+                    <p class="boards--paragraph paragraph">kippered (baked) salmon, cream cheese, bagel/bialy, tomato, onion, capers</p>
+                    <div class="boards--price price"><p>16</p></div>
+                </article>
+            </section>
+            <hr />
+        </div>
+
+            <div class="wrapper st-scroll">
+            <section class="auto-grid" id="st-panel-3">
+                <header class="platters__header">
+                    <h2 class="platters--title platters__header--subtitle">platters</h2>
+                    <p class="platters--paragraph paragraph">To be shared</p>
+                </header>
+                <article>
+                    <h3 class="platters--title title">smoked fish</h3>
+                    <p class="platters--paragraph paragraph"><em>Serves 3 - 4 people</em> with cream cheese, onion, tomato, capers &amp; new potato salad and Russ
+                        &amp; daughters bread basket</p>
+                </article>
+                <article>
+                    <h3 class="platters--title title">the hattie</h3>
+                    <p class="platters--paragraph paragraph">smoked whitefish, kippered (baked) salmon, gaspe nova smoked salmon, sable</p>
+                    <div class="platters--price price"><p>80</p></div>
+                </article>
+                <article>
+                    <h3 class="platters--title title">the ida</h3>
+                    <p class="platters--paragraph paragraph">scottish smoked salmon, gaspe nova smoked salmon, pastrami-cured salmon, gravlox</p>
+                    <div class="platters--price price"><p>70</p></div>
+                </article>
+                <article>
+                    <h3 class="platters--title title">the anne</h3>
+                    <p class="platters--paragraph paragraph">western nova smoked salmon, private stock sturgeon, sable, smoked brook trout, wild alaskan salmon
+                        roe</p>
+                    <div class="platters--price price"><p>90</p></div>
+                </article>
+            </section>
+            <hr />
+            <blockquote class="quote">
+
+                <div class="eyes">
+                    <div class="eyeLeft">
+                    </div>
+                    <input type="range" min="1" max="50" value="0" class="slider" id="myRange">
+                    <div class="eyeRight">
+                    </div>
+                </div>
+                <p class="quote--paragraph">Open your eyes</p>
+            </blockquote>
+            <hr />
+            <div class="wrapper">
+            <section class="auto-grid">
+            <header class="eggs__header">
+                <h2 class="eggs--title egges__header--subtitle">Eggs</h2>
+                <p class="eggs--paragraph paragraph">served all the time</p>
+            </header>
+            <article>
+                <h3 class="eggs--title title">Lox, eggs &amp; onions</h3>
+                <p class="eggs--paragraph paragraph">with toasted shissel rye</p>
+                <div class="eggs--price price"><p>15</p></div>
+            </article>
+            <article>
+                <h3 class="eggs--title title">sturgeon, eggs &amp; onion</h3>
+                <p class="eggs--paragraph paragraph">with toasted pumpernickel</p>
+                <div class="eggs--price price"><p>19</p></div>
+            </article>
+            <article>
+                <h3 class="eggs--title title">bella's matzo brei</h3>
+                <p class="eggs--paragraph paragraph">matzo, egg, applesauce, sour cream</p>
+                <div class="eggs--price price"><p>12</p></div>
+            </article>
+            <article>
+                <h3 class="eggs--title title">lower sunny side</h3>
+                <p class="eggs--paragraph paragraph">sunny side up eggs, gaspe nova smoked salmon, potato latkes</p>
+                <div class="eggs--price price"><p>16</p></div>
+            </article>
+            <article>
+                <h3 class="eggs--title title">eggs benny</h3>
+                <p class="eggs--paragraph paragraph">poached eggs, scottish smoked salmon, sautéed spinach, hollandaise, challah</p>
+                <div class="eggs--price price"><p>18</p></div>
+            </article>
+            <article>
+                <h3 class="eggs--title title">farm egg omelette</h3>
+                <p class="eggs--paragraph paragraph">gaspe nova smoked salmon, cream cheese</p>
+                <div class="eggs--price price"><p>15</p></div>
+            </article>
+            <article>
+                <h3 class="eggs--title title">soft scrambled eggs &amp; caviar</h3>
+                <p class="eggs--paragraph paragraph">custard-like egg, caviar with challah</p>
+                <div class="eggs--price price"><p>180</p></div>
+            </article>
+        </section>
+    </div>
+    <hr />
+
+    <div class="wrapper">
+        <section class="auto-grid">
+            <h2 class="soup--title soup__header--subtitle">Soup</h2>
+            <article>
+                <h3 class="soup--title title">Matzo Ball</h3>
+                <p class="soup--paragraph paragraph">chicken, vegetables, matzo ball</p>
+                <div class="soup--price price"><p>8</p></div>
+            </article>
+            <article>
+                <h3 class="soup--title title">Mushroom Barley</h3>
+                <p class="soup--paragraph paragraph">mushrooms, barley with shissel rye bread</p>
+                <div class="soup--price price"><p>8</p></div>
+            </article>
+            <article>
+                <h3 class="soup--title title">Borscht</h3>
+                <p class="soup--paragraph paragraph">served chilled: beets, sour cream, dill with pumpernickel</p>
+                <div class="soup--price price"><p>8</p></div>
+            </article>
+            <article>
+                <h3 class="soup--title title">Smoked Whitefish Chowder</h3>
+                <p class="soup--paragraph paragraph">dill, esplette pepper, matzo</p>
+                <div class="soup--price price"><p>10</p></div>
+            </article>
+        </section>
+    </div>
+    <hr />
+
+    <div class="wrapper">
+        <section class="auto-grid">
+            <h2 class="salads--title salads__header--subtitle">salads</h2>
+            <article>
+                <h3 class="salads--title title">Mixed Green</h3>
+                <p class="salad--paragraph paragraph">greens, fennel, dill, capers, citrus dressing</p>
+                <div class="salad--price price"><p>9</p></div>
+            </article>
+            <article>
+                <h3 class="salad--title title">Chopped Salad</h3>
+                <p class="salad--paragraph paragraph">smoked whitefish, avocado, beets, egg, apple, mixed greens, matzo, buttermilk dressing</p>
+                <div class="salad--price price"><p>14</p></div>
+            </article>
+            <article>
+                <h3 class="salad--title title">Smoked Trout& Potato</h3>
+                <p class="salad--paragraph paragraph">smoked trout, watercress, caper mustard dressing</p>
+                <div class="salad--price price"><p>14</p></div>
+            </article>
+        </section>
+        </div>
+        <hr/>
+
+
+
+        <section class="quote-grid">
+            <label for="toggle-1">Whuttt!?</label>
+            <input type="checkbox" id="toggle-1">
+            <div class="quote-card" tabIndex="0">
+            <div class="quote-card-inner">
+                <div class="quote-card-front">
+                    <blockquote>
+                        <p class="quote__card--paragraph">"A moltsayt on a tsimes iz via a mayse on a moshl."</p>
+                    </blockquote>
+                </div>
+                <div class="quote-card-back">
+                    <cite class="quote--cite">
+                        <p class="quote__card--paragraph">A meal without a sweet dish is like a story without a moral.</p>
+                        <p class="quote__card--paragraph">— Yiddish idiom</p>
+                    </cite>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+        <hr />
+        <div class="wrapper">
+        <section class="auto-grid">
+            <h2 class="sweet--title sweet__header--subtitle">sweet</h2>
+            <article>
+                <h3 class="sweet--title title">blintzes</h3>
+                <p class="sweet--paragraph paragraph">fruit compote, sour cream</p>
+                <div class="sweet--price price"><p>8</p></div>
+            </article>
+            <article>
+                <h3 class="sweet--title title">babka french toast</h3>
+                <p class="sweet--paragraph paragraph">chocolate babka, sour cream, berries</p>
+                <div class="sweet--price price"><p>10</p></div>
+            </article>
+            <article>
+                <h3 class="sweet--title title">noodle kugel</h3>
+                <p class="sweet--paragraph paragraph">farmer cheese, raisins, egg noodles</p>
+                <div class="sweet--price price"><p>7</p></div>
+            </article>
+            <article>
+                <h3 class="sweet--title title">challah bread pudding</h3>
+                <p class="sweet--paragraph paragraph">dried apricots, caramel sauce</p>
+                <div class="sweet--price price"><p>9</p></div>
+            </article>
+            <article>
+                <h3 class="sweet--title title">halvah ice cream</h3>
+                <p class="sweet--paragraph paragraph">halvah, sesame, salted caramel</p>
+                <div class="sweet--price price"><p>8</p></div>
+            </article>
+            <article>
+                <h3 class="sweet--title title">grandpa's grapefruit</h3>
+                <p class="sweet--paragraph paragraph">grapefruit, white germ, maple syrup</p>
+                <div class="sweet--price price"><p>6</p></div>
+            </article>
+            <article>
+                <h3 class="sweet--title title">baked farmer cheese</h3>
+                <p class="sweet--paragraph paragraph">blueberry, walnut &amp; honey with pumpernickel</p>
+                <div class="sweet--price price"><p>7</p></div>
+            </article>
+            <article>
+                <h3 class="sweet--title title">cookie plate</h3>
+                <p class="sweet--paragraph paragraph">Russ &amp; daughters cookies &amp; sweets</p>
+                <div class="sweet--price price"><p>8</p></div>
+            </article>
+            </section>
+            </div>
+            <hr />
+
+        </div>
+    </main>
+    <!-- HTML taken and adjusted from https://codepen.io/julesforrest/pen/VqXvgQ -->
+    <script src="script.js"></script>
+</body>
+</html>
