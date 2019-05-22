@@ -348,6 +348,7 @@ text {
 .quote-grid > input {
     display: none;
 }
+
 .quote-grid > label {
     line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
     color: var(--blue);
@@ -377,20 +378,20 @@ label:hover {
         transform: scaleX(0.3);
     }
 }
-
-
 .quote-card {
   background-color: transparent;
   width: 600px;
   height: 300px;
   perspective: 1000px;
 }
+
 .quote__card--paragraph {
     font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
     line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
     color: white;
     padding: 25px;
 }
+
 .quote-card-inner {
   position: relative;
   width: 100%;
@@ -406,9 +407,11 @@ label:hover {
 input[type=checkbox]:checked ~ .quote-card .quote-card-inner  {
    transform: rotateY(180deg);
 }
+
 input[type=checkbox]:checked ~ .quote-card:focus .quote-card-inner  {
    transform: rotateY(180deg);
 }
+
 .quote-card-front,
 .quote-card-back {
   position: absolute;
@@ -447,7 +450,6 @@ input[type=checkbox]:checked ~ .quote-card:focus .quote-card-inner  {
 		opacity: 1;
 	}
 }
-
 @keyframes moveUp{
 	0% {
 		transform: translateY(40px);
