@@ -155,7 +155,6 @@ article > .price {
     content: '\20AC';
     color: var(--blue);
 }
-
 .quote {
     text-align: center;
 }
@@ -216,6 +215,7 @@ text {
 	height: 15em;
 	overflow: hidden;
 }
+
 .drop:before,
 .drop:after {
 	content:"";
@@ -363,7 +363,6 @@ text {
 }
 
 label:hover {
-
     animation: scale 2s linear infinite;
 }
 
